@@ -51,68 +51,72 @@ array_push($array, 'Igor Oliveira Reame - 1140781913051 - LOG');
 </style>
 
 <body>
-    <div style="margin: 20px;">
-        <form>
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Título</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="titulo" placeholder="Título">
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Título</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="titulo" placeholder="Título">
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Autor(es)</label>
-                <div class="col-sm-10" style="margin-left:-15px">
-                    <!-- -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" class="form-control" id="chkfilter" placeholder="Digite aqui para pesquisar...">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Autor(es)</label>
+                    <div class="col-sm-10">
+                        <!-- -->
+                        <input type="text" class="col-sm-12 form-control" id="chkfilter" placeholder="Digite aqui para pesquisar...">
+                    </div>
+                    <div class="row" style="display: flex; height: 100px; overflow: auto; padding-left:10px; margin-left:10px; margin-top:20px;">
+                        <div class="col md-8">
+                            <?php
+                            foreach ($array as $i) {
+                                echo '<label class="form-check-label"><input class="form-check-input" type="checkbox" name="chk" id="chk6" value="', strtolower($i), '"> ', $i, '</label>';
+                            }
+                            ?>
+                        </div>
+                        <!-- -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Descrição</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" class="form-control" id="desc" placeholder="Descrição do trabalho..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 col-form-label">Data de Publicação/Apresentação</label>
+                    <div class="col-sm-4">
+                        <input type="date" class="form-control datepicker" id="data">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 col-form-label">Data de Publicação/Apresentação</label>
+                    <div class="col-sm-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Enviar</span>
+                            </div>
+                            <div class="custom-file col-sm-12">
+                                <input type="file" accept="application/pdf" class="custom-file-input" id="inputGroupFile01">
+                                <label class="custom-file-label" for="inputGroupFile01">Escolha um arquivo</label>
                             </div>
                         </div>
-                        <div class="row" style="display: flex; height: 100px; overflow: auto; padding-left:10px; margin-left:0px">
-                            <div class="col md-8">
-                                <?php
-                                foreach ($array as $i) {
-                                    echo '<label class="form-check-label"><input class="form-check-input" type="checkbox" name="chk" id="chk6" value="', strtolower($i), '"> ', $i, '</label>';
-                                }
-                                ?>
-                            </div>
-                        </div>
-                    </div><!-- -->
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Descrição</label>
-                <div class="col-sm-10">
-                    <textarea type="text" class="form-control" id="desc" placeholder="Descrição do trabalho..."></textarea>
+
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Data de Publicação/Apresentação</label>
-                <div class="col-sm-2">
-                    <input type="date" class="form-control datepicker" id="data">
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Arquivo</label>
-                <div class="col-sm-2">
-                    <input type="file" accept="application/pdf" id="upload" name="filename">
-                </div>
-            </div>
-
-
-
-            <div class="form-group row">
-                <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </body>
 
