@@ -12,10 +12,10 @@ include 'navbar.php';
 </head>
 
 
-<body class="bg-dark text-light">
+<body>
 
-
-
+<a href="pesquisa">Pesquisas</a>
+<a href="inserir">inserir</a>
 
 </body>
 
