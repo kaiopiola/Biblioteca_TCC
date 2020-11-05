@@ -15,7 +15,7 @@ array_push($array, 'Igor Oliveira Reame - 1140781913051 - LOG');
 
 <head>
     <meta charset="UTF-8">
-    <title>Inserir</title>
+    <title>Inserir - <?php echo $sitename; ?></title>
 </head>
 
 <script>
@@ -53,11 +53,11 @@ array_push($array, 'Igor Oliveira Reame - 1140781913051 - LOG');
 <body>
     <div class="container">
         <div class="row">
-            <form>
+            <form style="width: 100%;" action="teste_inserir.php" method="POST" >
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Título</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="titulo" placeholder="Título">
+                        <input type="text" class="form-control" id="titulo" placeholder="Título" name="titulo">
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@ array_push($array, 'Igor Oliveira Reame - 1140781913051 - LOG');
                         <div class="col md-8">
                             <?php
                             foreach ($array as $i) {
-                                echo '<label class="form-check-label"><input class="form-check-input" type="checkbox" name="chk" id="chk6" value="', strtolower($i), '"> ', $i, '</label>';
+                                echo '<label class="form-check-label"><input class="form-check-input" type="checkbox" name="chk[]" id="chk6" value="', strtolower($i), '"> ', $i, '</label>';
                             }
                             ?>
                         </div>
@@ -82,26 +82,26 @@ array_push($array, 'Igor Oliveira Reame - 1140781913051 - LOG');
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Descrição</label>
                     <div class="col-sm-10">
-                        <textarea type="text" class="form-control" id="desc" placeholder="Descrição do trabalho..."></textarea>
+                        <textarea type="text" class="form-control" id="desc" placeholder="Descrição do trabalho..." name="descricao"></textarea>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-4 col-form-label">Data de Publicação/Apresentação</label>
                     <div class="col-sm-4">
-                        <input type="date" class="form-control datepicker" id="data">
+                        <input type="date" class="form-control datepicker" id="data" name="data">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-4 col-form-label">Data de Publicação/Apresentação</label>
+                    <label for="inputEmail3" class="col-sm-4 col-form-label">Arquivo PDF</label>
                     <div class="col-sm-4">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Enviar</span>
                             </div>
                             <div class="custom-file col-sm-12">
-                                <input type="file" accept="application/pdf" class="custom-file-input" id="inputGroupFile01">
+                                <input type="file" accept="application/pdf" class="custom-file-input" id="inputGroupFile01" name="arquivo">
                                 <label class="custom-file-label" for="inputGroupFile01">Escolha um arquivo</label>
                             </div>
                         </div>
@@ -112,7 +112,7 @@ array_push($array, 'Igor Oliveira Reame - 1140781913051 - LOG');
 
                 <div class="form-group">
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-etevav">Enviar</button>
                     </div>
                 </div>
             </form>

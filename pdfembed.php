@@ -11,7 +11,7 @@ include 'navbar.php';
     <script>
         PDFObject.embed("./itil.pdf", "#example1");
     </script>
-    <title>Título do Documento - TCC</title>
+    <title>Título do Documento - <?php echo $sitename; ?></title>
 </head>
 
 <style>

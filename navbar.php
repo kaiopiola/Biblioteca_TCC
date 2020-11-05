@@ -1,14 +1,20 @@
+<?php
+include 'basics.php';
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="fa/css/all.css">
     <meta name='viewport' content='width=device-width, initial-scale=0.9, user-scalable=0'>
 </head>
 
 <style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
     @keyframes move_wave {
         0% {
             transform: translateX(0) translateZ(0) scaleY(1)
@@ -121,9 +127,9 @@
 </style>
 
 
-<body class="text-light">
+<body class="text-dark">
 
-    <div class="waveWrapper waveAnimation">
+    <!--<div class="waveWrapper waveAnimation">
         <div class="waveWrapperInner bgTop">
             <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
         </div>
@@ -138,10 +144,10 @@
         <div class="waveWrapperInner bgBottom">
             <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
         </div>
-    </div>
+    </div>-->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">TCC</a>
+        <a class="navbar-brand" href="./"><img class="img-fluid" style="max-width: 60px;" src="https://etevav.com.br/new1/wp-content/uploads/2016/04/cropped-logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -149,7 +155,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Início <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./">Início <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Cursos</a>
@@ -159,7 +165,7 @@
                         Login
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Entrar</a>
+                        <a class="dropdown-item" href="login">Entrar</a>
                         <a class="dropdown-item" href="#">Cadastrar</a>
                     </div>
                 </li>

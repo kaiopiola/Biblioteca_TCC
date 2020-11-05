@@ -1,5 +1,11 @@
 <?php
 include 'navbar.php';
+
+if(isset($pesquisa)){
+
+}else{
+    $pesquisa = 'Pesquisa vazia';
+}
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +14,7 @@ include 'navbar.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texto pesquisado - Pesquisa</title>
+    <title><?php echo $pesquisa; ?> - Pesquisa - <?php echo $sitename; ?></title>
 </head>
 
 <style>
