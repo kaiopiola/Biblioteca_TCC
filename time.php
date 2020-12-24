@@ -16,8 +16,8 @@ include 'navbar.php';
     <div class="container">
         <div class="card" style="margin:auto; border: none">
             <div class="card-title">
-                <h1 style="text-align: center;">Time de Desenvolvimento</h1>
-                <p class="card-text">Textinho maneiro aqui</p>
+                <h2 style="text-align: center;">Time de Desenvolvimento</h2>
+                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti fugit qui nisi, porro explicabo vitae velit eum voluptas est corporis.</p>
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@ include 'navbar.php';
             <img src="https://avatars2.githubusercontent.com/u/35163593?s=460&u=778e66402688f37989b0614b24142356749603b8&v=4" class="card-img-top rounded-circle" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Kaio Piola</h5>
-                <p class="card-text">Uma descrição dahora e formações etc.</p>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et vitae repellat a. Ad maiores expedita sunt vero temporibus numquam quaerat!</p>
                 <a href="https://github.com/kaiopiola" target="_blank" class="btn btn-primary">Github <i class="amz ext-link" style="color:white"></i></a>
             </div>
         </div>

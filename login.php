@@ -1,5 +1,14 @@
 <?php
 include 'basics.php';
+
+if (isset($_POST['email'])) {
+    $getUserData = new User();
+    $dados = $getUserData->Login($db, $_POST['email'], $_POST['senha']);
+
+    echo @$dados['user']['nome'];
+    echo '<br>';
+    echo password_hash($_POST['senha'], PASSWORD_BCRYPT);
+}
 ?>
 
 <!DOCTYPE html>
@@ -23,15 +32,15 @@ include 'basics.php';
                 <img class="img-fluid" src="https://precoltec.com.br/wp-content/uploads/2018/06/etevav_0.jpg" style="pointer-events: none;" alt="Logotipo ETEVAV">
             </div>
             <div class="col-md-6">
-                <form>
+                <form action="" method="POST">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Login</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
                         <small id="emailHelp" class="form-text text-muted">Suas informações estão seguras conosco ;)</small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Senha</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="senha">
                     </div>
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">

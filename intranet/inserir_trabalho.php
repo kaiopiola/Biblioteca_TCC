@@ -1,5 +1,4 @@
 <?php
-include 'navbar.php';
 
 $array = [];
 
@@ -10,13 +9,6 @@ array_push($array, 'Igor Oliveira Reame - 1140781913051 - LOG');
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Inserir - <?php echo $sitename; ?></title>
-</head>
 
 <script>
     $(function() {
@@ -52,8 +44,9 @@ array_push($array, 'Igor Oliveira Reame - 1140781913051 - LOG');
 
 <body>
     <div class="container">
+        <h1>Inserir trabalho</h1>
         <div class="row">
-            <form style="width: 100%;" action="teste_inserir.php" method="POST" >
+            <form style="width: 100%;" action="teste_inserir.php" method="POST">
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Título</label>
                     <div class="col-sm-10">
@@ -112,12 +105,11 @@ array_push($array, 'Igor Oliveira Reame - 1140781913051 - LOG');
 
                 <div class="form-group">
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-etevav">Enviar</button>
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                        <a href="?page=trabalhos" class="btn btn-secondary">Voltar</a>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </body>
-
-</html>
