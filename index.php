@@ -1,5 +1,5 @@
 <?php
-include 'navbar.php';
+include 'include/menu.php';
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +39,6 @@ include 'navbar.php';
 	<!--<h1><span class="logo">< kpsoft /></span></h1>-->
 
 
-</body>
-
-</html>
+	<?php
+	include 'include/footer.php';
+	?>

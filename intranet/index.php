@@ -1,6 +1,5 @@
 <?php
-include '../basics.php';
-
+include '../include/header.php';
 ?>
 
 <!DOCTYPE html>
@@ -55,6 +54,6 @@ include '../basics.php';
             <?php } ?>
         </div>
     </div>
-</body>
-
-</html>
+<?php
+include '../include/footer.php';
+?>

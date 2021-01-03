@@ -1,7 +1,7 @@
 <?php
 if (isset($_GET['key']) && password_verify($_GET['key'], '$2y$10$O8pj2wXn4LlMtELYYYVoiuibN5wysvgxWPJjkFLMqkMOj1lIgK22S')) {
     $canplay = true;
-    include 'navbar.php';
+    include 'include/header.php';
 } else {
     $canplay = false;
     //header('location: /');
@@ -91,3 +91,5 @@ $source_url = 'http' . ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off'
     </html>
 
 <?php } ?>
+
+<?php include 'include/footer.php'; ?>

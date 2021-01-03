@@ -25,11 +25,11 @@ class User
         }
     }
 
-    function RegisterAluno($db, $ra, $email, $senha, $curso)
+    function registerAluno($db, $ra, $email, $senha, $curso)
     {
     }
 
-    function RegisterProfessor($db, $email, $password)
+    function registerProfessor($db, $email, $password)
     {
     }
 
@@ -44,5 +44,10 @@ class User
         }else{
             echo 'Usuário não encontrado.';
         }
+    }
+
+    function listAlunos($db)
+    {
+
     }
 }

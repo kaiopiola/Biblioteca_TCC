@@ -1,9 +1,8 @@
 <?php
 include 'functions/trabalhos.php';
 
-$getTrabalho = new Trabalho();
-$trabalhos = $getTrabalho->getTrabalho($db);
-echo count($trabalhos['id']);
+$trabalhos = $trabalho->getTrabalho($db);
+//echo count($trabalhos['id']);
 //$trabalhos = $trabalhos['trabalho'];
 
 ?>
